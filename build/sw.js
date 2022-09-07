@@ -22,13 +22,13 @@ this.addEventListener("fetch", (event) => {
     })
   )
     if (!navigator.onLine) {
-        if (event.request.url === "http://localhost:3000/static/js/main.chunk.js") {
-            event.waitUntil(
-                this.registration.showNotification("Internet", {
-                    body: "internet not working",
-                })
-            )
-        }
+        // if (event.request.url === "http://localhost:3000/static/js/main.chunk.js") {
+        //     event.waitUntil(
+        //         this.registration.showNotification("Internet", {
+        //             body: "internet not working",
+        //         })
+        //     )
+        // }
         event.respondWith(
             caches.match(event.request).then((resp) => {
                 if (resp) {

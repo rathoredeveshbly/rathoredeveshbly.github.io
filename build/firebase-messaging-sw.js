@@ -11,7 +11,7 @@
 //     }
 
 // firebase.initializeApp({
-//     messagingSenderId: "875918063745",
+//     messagingSenderId: "388018224029",
 //   })
 
 // const initMessaging = firebase.messaging()

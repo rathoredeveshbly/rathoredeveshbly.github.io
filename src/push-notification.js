@@ -15,7 +15,8 @@ export const askForPermissionToReceiveNotifications = async () => {
       const messaging = firebase.messaging();
       //firebase.messaging.Messaging.requestPermission()
     //   await messaging.requestPermission();
-      const token = await messaging.getToken();
+    console.log("****",messaging)
+      const token = await messaging.firebaseDependencies.installations.getToken();
       console.log('Your token is:', token);
       
       return token;
